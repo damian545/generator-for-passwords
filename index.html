@@ -5,27 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Generator For Passwords!</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="wrapper">
       <header>
-        <h1>Password Generator</h1>
+        <h1>The Password Generator</h1>
       </header>
       <div class="card">
         <div class="card-header">
-          <h2>Generate a Password</h2>
+          <h2>Generate Your Password</h2>
         </div>
         <div class="card-body">
-          <textarea
-            readonly
-            id="password"
-            placeholder="Your Secure Password"
-            aria-label="Generated Password"
-          ></textarea>
+          <div class="container">
+            <div class="results-container">
+              <span id="result"></span>
+              <br />
+              <br />
+            </div>
+            <div class="settings">
+              <div class="setting">
+                <label for="length">Password Length</label>
+                <input type="number" id="length" min="8" max="70" value="70" />
+              </div>
+              <div class="setting">
+                <label for="uppercase">Include Uppercase Letters</label>
+                <input type="checkbox" id="uppercase" checked />
+              </div>
+              <div class="setting">
+                <label for="lowercase">Include Lowercase Letters</label>
+                <input type="checkbox" id="lowercase" checked />
+              </div>
+              <div class="setting">
+                <label for="numbers">Include Numbers</label>
+                <input type="checkbox" id="numbers" checked />
+              </div>
+              <div class="setting">
+                <label for="symbols">Include Symbols</label>
+                <input type="checkbox" id="symbols" checked />
+              </div>
+            </div>
+            <button class="btn btn-large" id="generate">
+              Generate Password
+            </button>
+          </div>
         </div>
-        <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
-        </div>
+        <div class="card-footer"></div>
       </div>
     </div>
     <script src="script.js"></script>
